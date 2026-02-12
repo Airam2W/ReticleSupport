@@ -1,0 +1,11 @@
+{
+    "mode": "circle",
+    "circle": {
+        "color": "#80ffff",
+        "size": 20,
+        "opacity": 1.0
+    },
+    "image": {
+        "path": ""
+    }
+}
