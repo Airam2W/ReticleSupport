@@ -1,4 +1,4 @@
-# Configuration Manager
+# Configuration Manager of the application, responsible for saving and loading user settings to/from a JSON file.
 
 import json
 import os

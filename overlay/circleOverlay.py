@@ -1,4 +1,4 @@
-# Circle's Overlay
+# Circle's Overlay is responsible for drawing the circle or image reticle and positioning it over the target window. It uses a transparent Tkinter window to display the reticle, which is updated every 30 milliseconds to ensure it stays centered on the target window, even if the window moves or changes size. The overlay can be customized with different colors, sizes, and images based on user preferences stored in the app state.
 
 from logging import root
 import tkinter as tk

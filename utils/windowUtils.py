@@ -1,4 +1,4 @@
-# Returns a list of (hwnd, title) for visible windows.
+# This module provides utility functions for working with windows on the Windows operating system.
 
 import win32gui
 

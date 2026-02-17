@@ -1,4 +1,4 @@
-# Configuration window shown at startup.
+# Configuration window shown at startup, allowing users to customize the reticle settings.
 
 import tkinter as tk
 from tkinter import ttk, colorchooser

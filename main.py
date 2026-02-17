@@ -1,4 +1,4 @@
-# Main programa
+# Main program
 
 from ui.configWindow import ConfigWindow
 from core.appState import app_state
