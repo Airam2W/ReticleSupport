@@ -1,9 +1,9 @@
-# Configuration Manager of the application, responsible for saving and loading user settings to/from a JSON file.
-
 import json
 import os
 
-CONFIG_PATH = "config/config.json"
+# Carpeta de configuración en AppData
+APPDATA_DIR = os.path.join(os.environ["APPDATA"], "ReticleSupport")
+CONFIG_PATH = os.path.join(APPDATA_DIR, "config.json")
 
 def save_config(app_state):
     data = {
@@ -18,7 +18,7 @@ def save_config(app_state):
         }
     }
 
-    os.makedirs("config", exist_ok=True)
+    os.makedirs(APPDATA_DIR, exist_ok=True)
 
     with open(CONFIG_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)

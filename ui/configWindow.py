@@ -1,13 +1,16 @@
 # Configuration window shown at startup, allowing users to customize the reticle settings.
 
+import os
 import tkinter as tk
 from tkinter import ttk, colorchooser
+from tkinter import messagebox
 from core.appState import app_state
 from core.configManager import load_config, save_config
 from utils.windowUtils import list_open_windows
 from tkinter import filedialog
 
 
+ICON_RUTE = os.path.join(os.path.dirname(__file__), "../utils/settings.ico")
 
 class ConfigWindow:
 
@@ -18,6 +21,7 @@ class ConfigWindow:
         self.root.title("Reticle Support - Configuration")
         self.root.geometry("400x515")
         self.root.resizable(False, False)
+        self.root.iconbitmap(ICON_RUTE)
         self.center_window(400, 515)
         self.opacity_var = tk.DoubleVar(value=app_state.opacity)
         
@@ -299,6 +303,7 @@ class ConfigWindow:
         if self.window_var.get() == "":
             tk.messagebox.showerror("Error", "Please select a target window")
             return
+        messagebox.showinfo("Information", "If you want to change circle/image's settings, exit the application and restart it.\n\nI am sorry for any inconvenience caused.\n\nPlease, press OK to continue.")
         app_state.circle_size = self.size_var.get()
         app_state.opacity = self.opacity_var.get()
         app_state.mode = self.mode_var.get()
@@ -307,7 +312,7 @@ class ConfigWindow:
         save_config(app_state)
         self.root.destroy()
         self.on_start()
-
+        
 
     def run(self):
         self.root.mainloop()

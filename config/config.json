@@ -1,11 +1,11 @@
 {
-    "mode": "circle",
+    "mode": "image",
     "circle": {
         "color": "#80ffff",
         "size": 20,
-        "opacity": 1.0
+        "opacity": 0.7
     },
     "image": {
-        "path": ""
+        "path": "C:/Users/Tec21/OneDrive/Desktop/hq720.jpg"
     }
 }
